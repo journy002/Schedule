@@ -2,10 +2,8 @@ package com.example.scheduleApp.repository;
 
 import com.example.scheduleApp.entity.Schedule;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
@@ -44,5 +42,4 @@ public class ScheduleRepository {
             return schedule;
         }, id);
     }
-
 }
