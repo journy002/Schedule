@@ -8,16 +8,14 @@
 
 ### 2. ERD 다이어그램
 
-┌───────────┬──────────────┬──────┬──────┬───────────────────────┬─────────────────────────────┐
-│   Field   │     Type     │ Null │ Key  │       Default         │            Extra            │
-├───────────┼──────────────┼──────┼──────┼───────────────────────┼─────────────────────────────┤
-│ id        │ INT(11)      │ NO   │ PRI  │ AUTO_INCREMENT        │                             │
-│ title     │ VARCHAR(255) │ NO   │      │ NULL                  │                             │
-│ author    │ VARCHAR(100) │ NO   │      │ NULL                  │                             │
-│ password  │ VARCHAR(255) │ NO   │      │ NULL                  │                             │
-│ created_at│ TIMESTAMP    │ NO   │      │ CURRENT_TIMESTAMP     │                             │
-│ updated_at│ TIMESTAMP    │ NO   │      │ CURRENT_TIMESTAMP     │ ON UPDATE CURRENT_TIMESTAMP │
-└───────────┴──────────────┴──────┴──────┴───────────────────────┴─────────────────────────────┘
+schedules
+---------
+- id (PK) : INT, AUTO_INCREMENT
+- title : VARCHAR(255), NOT NULL
+- author : VARCHAR(100), NOT NULL
+- password : VARCHAR(255), NOT NULL
+- created_at : TIMESTAMP, DEFAULT CURRENT_TIMESTAMP
+- updated_at : TIMESTAMP, DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 ### 3. SQL 파일
 
