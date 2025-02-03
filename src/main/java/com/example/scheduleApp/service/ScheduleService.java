@@ -4,19 +4,17 @@ import com.example.scheduleApp.dto.ScheduleRequestDto;
 import com.example.scheduleApp.dto.ScheduleResponseDto;
 import com.example.scheduleApp.entity.Schedule;
 import com.example.scheduleApp.repository.ScheduleRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class ScheduleService {
 
     private final ScheduleRepository scheduleRepository;
-
-    public ScheduleService(ScheduleRepository scheduleRepository) {
-        this.scheduleRepository = scheduleRepository;
-    }
 
     public void createSchedule(ScheduleRequestDto requestDto) {
         Schedule schedule = new Schedule();
